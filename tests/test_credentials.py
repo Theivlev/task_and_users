@@ -12,13 +12,15 @@ def test_google_cred():
     need_cred = [
         'app_title',
         'description',
-        'database_url',
+        'database_url_lite',
         'secret',
-        'postgres_user',
-        'postgres_password',
-        'postgres_host',
-        'postgres_port',
-        'postgres_name',
+        'POSTGRESS_DB_NAME',
+        'POSTGRESS_HOST',
+        'POSTGRESS_PORT',
+        'POSTGRES_USER',
+        'POSTRGRES_PASSWORD',
+        'REDIS_HOST',
+        'REDIS_PORT',
     ]
     for cred in need_cred:
         assert hasattr(settings, cred), (

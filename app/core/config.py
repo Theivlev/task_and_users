@@ -2,6 +2,7 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
+    """Класс для работы с переменными окружения."""
     app_title: str = 'Подъземелье, драконы и записи пользователей'
     description: str = 'Пользователи делают записи'
     secret: str = 'SECRET'

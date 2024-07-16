@@ -1,13 +1,14 @@
-FROM python:3.12
+FROM python:3.9
 
-WORKDIR /code
+RUN mkdir /task_and_users     
 
-COPY ./requirements.txt /code/requirements.txt
+WORKDIR /task_and_users   
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+COPY requirements.txt . 
 
+RUN pip install -r requirements.txt
 
-COPY ./app /code/app
+COPY . .
 
 
 RUN chmod a+x /task_and_users/docker/*.sh

@@ -10,7 +10,7 @@ asgiref==3.5.2
 asyncpg==0.29.0
 atomicwrites==1.4.1
 attrs==21.4.0
-bcrypt==4.1.2
+bcrypt==3.2.2
 cachetools==5.3.2
 certifi==2022.5.18.1
 cffi==1.15.0
@@ -91,4 +91,7 @@ uvicorn==0.17.6
 watchfiles==0.22.0
 watchgod==0.8.2
 websockets==10.3
+gunicorn==21.2.0
 yarl==1.9.4
+redis==4.5.5
+slowapi==0.1.8

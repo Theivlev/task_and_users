@@ -55,11 +55,12 @@ async def update_task(task_id: int, modified_task: TaskUpdate,
                       session: AsyncSession = Depends(get_async_session),
                       current_user: User = Depends(current_user)):
     """Пользователь обновляет задачу"""
-    task = await task_crud.update_task(session, task_id, modified_task, current_user.id)
+    task = await task_crud.update_task(
+        session, task_id, modified_task, current_user.id)
     if task is None:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Запись не найдена или вы пытаетесь редактировать чужую запись!")
+            detail="Запись не найдена/пытаетесь редактировать чужую запись!")
     return task
 
 

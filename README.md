@@ -44,28 +44,6 @@ API записи и пользователи.
 - Uvicorn
 - Gunicorn
 
-
-#### Запуск в контейнерах Docker
-
-- Предварительно необходимо установить Docker для вашей системы.
-
-- Находясь в главной директории проекта:
-
-- Создать файл .env-docker по образцу:
-
-```bash
-   cp .env-docker-example .env-docker 
-```
-
-- Запустить проект:
-
-``` bash
-    docker-compose up -d --build  
-```
-
-### В контейнерах Docker документация по адресу: <http://localhost:7777/docs/>
-
-
 #### Локальный запуск проекта
 
 - Склонировать репозиторий:
@@ -171,6 +149,31 @@ print(target_metadata.tables) # вывод для просмотра FacadeDict,
 ``` bash
     redis-server.exe 
     redis-cli.exe  
+```
+
+#### Запуск в контейнерах Docker
+
+- Предварительно необходимо установить Docker для вашей системы.
+
+- у нас есть alembic и прописаны настройки в файле env.py(код выше)
+
+- Находясь в главной директории проекта:
+
+- Создать файл .env-docker по образцу:
+
+```bash
+   cp .env-docker-example .env-docker 
+```
+
+- Запустить проект:
+
+``` bash
+    docker-compose up -d --build  
+```
+
+### В контейнерах Docker документация по адресу: <http://localhost:7777/docs/>
+
+
 ```
 
 

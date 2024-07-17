@@ -233,7 +233,7 @@ PUT - '/tasks/{task_id}/'
 
 ```
 DELETE - '/tasks/{task_id}/'
-
+```
 
 #### Автор
 
